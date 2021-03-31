@@ -1,0 +1,9 @@
+.custom-card-footer {
+    border: none !important;
+    background-color: white !important;
+}
+.custom-card {
+    padding: 10px;
+    border-radius: 10px !important;
+    border: none !important;
+}

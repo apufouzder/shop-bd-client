@@ -1,0 +1,13 @@
+
+th{
+    border-bottom: none !important;
+}
+
+@media (max-width: 600px) {
+    .custom-table{
+      font-size: 13px;
+    }
+    td, th{
+        padding: .35rem !important;
+    }
+  }

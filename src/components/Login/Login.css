@@ -1,0 +1,19 @@
+.googleBtn {
+    width: 400px;
+    padding: 5px;
+    border-radius: 25px;
+    border: 1px solid gray;
+    background: white;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+span img {
+    width: 35px;
+    margin-right: 100px;
+}
+span {
+    float: left;
+    margin-left: 11px;
+}

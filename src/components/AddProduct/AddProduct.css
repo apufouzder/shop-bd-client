@@ -1,0 +1,38 @@
+.myButton {
+    background: linear-gradient(
+335.64deg
+,#4d9a32 -19.22%,#80d364 118.87%);
+    border: none;
+    padding: 6px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+}
+input[type='file']{
+    height:30px;
+    width:140px;
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+
+  }
+
+.file-upload{
+    height:30px;
+    width:140px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items: center; 
+    /* border:1px solid rgb(91, 183, 245); */
+    border:1px solid rgb(104, 197, 73);
+    background-color: #dcffec !important;
+    border-radius:5px;
+    padding-left:10px;
+    margin-top:10px;
+    transition: all 1s;
+    color: #FFFFFF;
+    font-size:13px; 
+    
+}
