@@ -68,7 +68,7 @@ const AddProduct = () => {
                     <b style={{ color: '#6c4bf4', margin: '0' }}>Upload image</b>
                 </div>
                 <br /><br />
-                <input className="myButton" type="submit" value="addProduct" />
+                <input className="myButton" type="submit" value="Add Product" />
             </form>
         </Container>
     );
