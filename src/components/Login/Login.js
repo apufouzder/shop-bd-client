@@ -19,11 +19,11 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function (result) {
-            const { displayName, email } = result.user;
-            const signedInUser = { name: displayName, email }
+            const { displayName, email, photoURL } = result.user;
+            const signedInUser = { name: displayName, email, photoURL }
             setLoggedInUser(signedInUser);
             history.replace(from);
-            console.log('signedInUser', signedInUser);
+            console.log('signedInUser', photoURL);
         }).catch(function (error) {
             const errorMessage = error.message;
             console.log('errorMessage', errorMessage);

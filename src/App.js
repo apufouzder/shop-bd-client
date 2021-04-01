@@ -6,12 +6,14 @@ import {
 } from "react-router-dom";
 import './App.css';
 import AdminPanel from "./components/AdminPanel/AdminPanel";
+import Deals from "./components/Deals/Deals";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Orders from "./components/Orders/Orders";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
+import NotFound from "./components/NotFound/NotFound";
 
 export const UserContext = createContext();
 
@@ -39,6 +41,10 @@ function App() {
             <AdminPanel />
           </PrivateRoute>
 
+          <Route path="/deals">
+            <Deals />
+          </Route>
+
           <Route path="/login">
             <Login />
           </Route>
@@ -48,7 +54,7 @@ function App() {
           </Route>
 
           <Route path="*">
-            <h1>Page Not Found 404!!</h1>
+            <NotFound />
           </Route>
 
         </Switch>

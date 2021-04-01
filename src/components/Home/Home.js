@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import ProductCard from '../ProductCard/ProductCard';
 import loader from '../../images/loader.gif';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
     const [products, setProducts] = useState({});
@@ -34,7 +35,6 @@ const Home = () => {
                     <button className="myButton">Search</button>
                 </div>
                 <Row className="d-flex py-5">
-
                     {
                         products.length > 0
                             ? products.map?.(product => <ProductCard key={product._id} product={product}></ProductCard>)
@@ -42,6 +42,7 @@ const Home = () => {
                     }
                 </Row>
             </Container>
+            <Footer />
         </>
     );
 };

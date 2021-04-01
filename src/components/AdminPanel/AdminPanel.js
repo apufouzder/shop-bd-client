@@ -36,6 +36,7 @@ const AdminPanel = () => {
         <Router>
             <div style={{ display: "flex" }}>
                 <div
+                    className="sidebar"
                     style={{
                         padding: "10px",
                         width: "20%",
@@ -46,19 +47,19 @@ const AdminPanel = () => {
                 >
                     <ul style={{ listStyleType: "none", padding: 0 }}>
                         <li>
-                            <Link style={{ color: 'white', fontSize: '1.3rem' }} to="/">
+                            <Link id="admin-link" style={{ color: 'white', fontSize: '1.3rem' }} to="/">
                                 <img style={{ width: '25px', marginRight: '5px', alignItems: 'center' }} src={manageProductIcon} alt='/' />
                              Manage Product
                             </Link>
                         </li>
                         <li>
-                            <Link style={{ color: 'white', fontSize: '1.3rem' }} to="/addProduct">
+                            <Link id="admin-link" style={{ color: 'white', fontSize: '1.3rem' }} to="/addProduct">
                                 <img style={{ width: '25px', marginRight: '5px', alignItems: 'center' }} src={addProductIcon} alt='/' />
                                 addProduct
                             </Link>
                         </li>
                         <li>
-                            <Link style={{ color: 'white', fontSize: '1.3rem' }} to="/editProduct">
+                            <Link id="admin-link" style={{ color: 'white', fontSize: '1.3rem' }} to="/editProduct">
                                 <img style={{ width: '25px', marginRight: '5px', alignItems: 'center' }} src={editProductIcon} alt='/' />
                                 Edit Product
                             </Link>

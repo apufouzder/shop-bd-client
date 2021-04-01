@@ -54,31 +54,21 @@ const AddProduct = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 <label>Product Name</label> <br />
-                <input name="name" defaultValue="New Product" ref={register} />
-                <br />
+                <input className="form-control" name="name" defaultValue="New Product" ref={register} />
                 <label>Add Price</label> <br />
-                <input name="price" defaultValue="250" ref={register} />
-                <br />
+                <input className="form-control" name="price" defaultValue="250" ref={register} />
                 <label>Size</label> <br />
-                <input name="size" defaultValue="XL" ref={register} />
-                <br />
+                <input className="form-control" name="size" defaultValue="XL" ref={register} />
                 <label>Quantity</label> <br />
-                <input name="quantity" defaultValue="1" ref={register} />
-                <br />
-                <br />
+                <input className="form-control" name="quantity" defaultValue="1" ref={register} />
                 <label>Add Photo</label>
-                {/* <div className="upload">
-
-                    <input type="file" name="exampleRequired" onChange={handleImageUpload} />
-                    <img src={UploadIcon} alt="" />
-                </div> */}
                 <div className='file-upload'
                     style={{ background: `url(${UploadIcon}) no-repeat`, backgroundSize: '30px 30px' }}>
                     <input type="file" name="exampleRequired" onChange={handleImageUpload} />
                     <b style={{ color: '#6c4bf4', margin: '0' }}>Upload image</b>
                 </div>
                 <br /><br />
-                <input className="myButton" type="submit" />
+                <input className="myButton" type="submit" value="addProduct" />
             </form>
         </Container>
     );

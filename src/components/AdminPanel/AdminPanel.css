@@ -1,0 +1,12 @@
+
+@media (max-width: 768px) {
+    #admin-link{
+      font-size: 15px !important;
+    }
+    #admin-link img{
+        width: 16px !important;
+    }
+    .sidebar{
+        width: 29% !important;
+    }
+  }

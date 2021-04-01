@@ -1,30 +1,29 @@
 import React, { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Button, Col, Container, Row, Table } from 'react-bootstrap';
-import { useParams } from 'react-router';
+import { Col, Container, Row, Table } from 'react-bootstrap';
+import { useHistory, useParams } from 'react-router';
 import { UserContext } from '../../App';
 import './ProductDetails.css';
 
 const ProductDetails = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [product, setProducts] = useState([]);
-    // console.log('product', product);
     const { name, quantity, price, size } = product;
     let { _id } = useParams();
+    const history = useHistory();
 
     useEffect(() => {
         fetch(`http://localhost:2050/product/${_id}`)
             .then(res => res.json())
             .then(data => {
-                // console.log('data', data);
-                // console.log('data', data);
                 setProducts(data);
             })
-    }, [])
+    }, [_id])
 
     // handle checkout button function
     const handleOrder = () => {
+        history.push('/orders')
         const newOrder = { ...loggedInUser, ...product, orderTime: (new Date().toDateString('dd/MM/yyyy')) }
         fetch('http://localhost:2050/addOrder', {
             method: 'POST',
@@ -39,13 +38,13 @@ const ProductDetails = () => {
 
     return (
         <Container>
-            <Row>
+            <Row className="py-4">
                 <Col md={8}>
-                    <h1>Checkout</h1>
+                    <h1 className="mb-4">Checkout</h1>
                     <Table className="shadow" style={{ borderRadius: '5px' }}>
                         <thead>
                             <tr>
-                                <th>Description</th>
+                                <th>Product Name</th>
                                 <th>Quantity</th>
                                 <th>Size</th>
                                 <th>Price</th>
@@ -67,11 +66,9 @@ const ProductDetails = () => {
                                 <th colSpan=""></th>
                                 <th><button className="myButton" onClick={handleOrder}>CheckOut</button></th>
                             </tr>
-
                         </tbody>
                     </Table>
                 </Col>
-
             </Row>
         </Container>
     );

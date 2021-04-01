@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import ManageProductDetails from '../ManageProductDetails/ManageProductDetails';
+import loader from '../../images/loader.gif';
 
 const ManageProduct = () => {
     const [manageProduct, setManageProduct] = useState({});
@@ -27,7 +28,9 @@ const ManageProduct = () => {
 
                     <tbody>
                         {
-                            manageProduct.map?.(product => <ManageProductDetails key={product._id} product={product} />)
+                            manageProduct.length > 0
+                                ? manageProduct.map?.(product => <ManageProductDetails key={product._id} product={product} />)
+                                : <img style={{ width: '30%', margin: 'auto' }} src={loader} alt="" />
                         }
                     </tbody>
                 </Table>
