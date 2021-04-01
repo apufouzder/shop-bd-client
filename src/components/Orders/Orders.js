@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { UserContext } from '../../App';
 import OrderDetails from '../OrderDetails/OrderDetails';
-import loader from '../../images/loader.gif';
 
 const Orders = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -25,9 +24,7 @@ const Orders = () => {
                 product.
             </h3>
             {
-                orders.length > 0
-                    ? orders.map(order => <OrderDetails key={order._id} order={order} />)
-                    : <img style={{ width: '30%', margin: 'auto' }} src={loader} alt="" />
+                orders.map(order => <OrderDetails key={order._id} order={order} />)
             }
         </Container>
     );

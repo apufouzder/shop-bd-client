@@ -32,8 +32,6 @@ const Header = () => {
                                         Login
                             </Nav.Link>
                             }
-
-
                         </Nav>
                     </Navbar.Collapse>
                 </div>

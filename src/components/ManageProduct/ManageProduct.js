@@ -12,8 +12,6 @@ const ManageProduct = () => {
             .then(data => setManageProduct(data))
     }, [])
 
-
-
     return (
         <>
             <h1 className="mb-4">Manage Product</h1>

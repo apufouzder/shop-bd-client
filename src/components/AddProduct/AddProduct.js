@@ -34,7 +34,6 @@ const AddProduct = () => {
     };
 
     const handleImageUpload = event => {
-        // console.log(event.target.files[0]);
         const imageData = new FormData();
         imageData.set('key', '46f0ffc881fb748293fdf8b93dce6295');
         imageData.append('image', event.target.files[0])
