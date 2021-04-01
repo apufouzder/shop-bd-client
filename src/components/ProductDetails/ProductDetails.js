@@ -14,7 +14,7 @@ const ProductDetails = () => {
     const history = useHistory();
 
     useEffect(() => {
-        fetch(`http://localhost:2050/product/${_id}`)
+        fetch(`https://pumpkin-crumble-28315.herokuapp.com/product/${_id}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
@@ -25,7 +25,7 @@ const ProductDetails = () => {
     const handleOrder = () => {
         history.push('/orders')
         const newOrder = { ...loggedInUser, ...product, orderTime: (new Date().toDateString('dd/MM/yyyy')) }
-        fetch('http://localhost:2050/addOrder', {
+        fetch('https://pumpkin-crumble-28315.herokuapp.com/addOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newOrder)

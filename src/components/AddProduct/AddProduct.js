@@ -20,7 +20,7 @@ const AddProduct = () => {
             imageURL: imageURL
         };
         console.log(productData);
-        const url = `http://localhost:2050/addProduct`;
+        const url = `https://pumpkin-crumble-28315.herokuapp.com/addProduct`;
         fetch(url, {
             method: 'POST',
             headers: {
