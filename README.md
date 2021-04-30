@@ -7,11 +7,11 @@
 
 ### Overview
 
-#### Users can buy any product and checkout.
-#### user login with google.
-#### user see all orders products.
-#### add a new product.
-#### delete the product.
+##### Users can buy any product and checkout.
+##### user login with google.
+##### user see all orders products.
+##### add a new product.
+##### delete the product.
 
 ### Using Technology
 

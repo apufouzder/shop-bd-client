@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Col, Container, Row, Table } from 'react-bootstrap';
-import { useHistory, useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { UserContext } from '../../App';
 import './ProductDetails.css';
 
@@ -11,7 +11,6 @@ const ProductDetails = () => {
     const [product, setProducts] = useState([]);
     const { name, quantity, price, size } = product;
     let { _id } = useParams();
-    const history = useHistory()
 
     useEffect(() => {
         fetch(`https://pumpkin-crumble-28315.herokuapp.com/product/${_id}`)
@@ -31,10 +30,8 @@ const ProductDetails = () => {
         })
             .then(res => res.json())
             .then(data => {
-                // console.log('order data', data);
-                if (data) {
-                    history.push(`/orders`)
-                }
+                console.log('order data', data);
+
             })
     }
 
