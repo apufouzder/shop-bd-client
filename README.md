@@ -4,10 +4,16 @@
 
 ### Live Site: (https://shopbd-2671f.web.app/)
 
-You can buy any product and checkout your order. 
-You can update and delete the product.
 
-## Using Technology
+### Overview
+
+#### Users can buy any product and checkout.
+#### user login with google.
+#### user see all orders products.
+#### add a new product.
+#### delete the product.
+
+### Using Technology
 
 #### Using Technology
 #### MongoDB
